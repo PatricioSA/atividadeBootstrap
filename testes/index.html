@@ -23,7 +23,7 @@
 
         header {
             margin: 0 auto;
-            width: 1200px;
+            width: 100%;
             font-family: 'Roboto', sans-serif;
         }
 
@@ -33,7 +33,7 @@
 
         main {
             margin: 0 auto;
-            width: 1200px;
+            width: 100%;
         }
 
         aside img {
@@ -45,7 +45,7 @@
         footer {
             display: flex;
             justify-content: center;
-            width: 1200px;
+            width: 100%;
             height: 10vh;
             margin: 0 auto;
         }
@@ -64,14 +64,37 @@
 
 <body class="bg-dark">
     
-    <header class="p-3 bg-success text-center fs-2">
-        <nav>
+    <header class="">
+
+        <nav class="navbar navbar-expand-sm navbar-dark bg-success p-2">
+
+            <!--Menu Sanduiche (Hamburguer)
+            data-bs-toogle: indica que botão pressionado apresentará o menu.
+            data-bs-target: define o que vamos mostrar através de um Id-->
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                data-bs-target="#menu-target">
+                <span class="navbar-toggler-icon"></span>         
+            </button>
+
+            <!--Colapsando o menu-->
+            <div class="collapse navbar-collapse" id="menu-target">
+                <!--Alinhamento do Menu para a direita
+                margem esquerda automáica-->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"> <a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Capacidades técnicas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Pretenção</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!--<nav>
             <ul class="list-inline">
                 <li class="list-inline-item"><a href="#" class="text-decoration-none fw-bold">Home</a></li>
                 <li class="list-inline-item"><a href="capacidades.html" class="text-decoration-none fw-bold px-5">Capacidades técnicas</a></li>
                 <li class="list-inline-item"><a href="pretenção.html" class="text-decoration-none fw-bold">Pretenção</a></li>
             </ul>
-        </nav>
+        </nav>-->
     </header>
 
     <main class="d-flex text-light mt-4">
